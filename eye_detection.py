@@ -1,12 +1,12 @@
 import cv2
 
-face_cascade = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('../haarcascades/haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
-# cap = cv2.VideoCapture('../Resources/song.mp4')
+# cap = cv2.VideoCapture('../Resources/song.mp4') # for video
 cap = cv2.VideoCapture(1)
 
-
+# iterating over each frame
 while True:
     success, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
